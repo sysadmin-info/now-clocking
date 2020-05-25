@@ -1,6 +1,6 @@
 --[[
 #=====================================================================================
-#                               now-clocking (playing) artist (cover displaying) file
+#                               conky-spotify Main file
 # Date    : package-date
 # Author  : gamehelp16 at https://gamehelp16.github.io/
 # Version : package-version
@@ -56,9 +56,9 @@ conky.config = {
                                   				-- middle_left,middle_middle,middle_right,none
     gap_x = 50,									-- Pixels between right or left border
 	gap_y = 150,								-- Pixels between bottom or left border
-	minimum_height = 1,							-- Minimum height of window
+	minimum_height = 1,						-- Minimum height of window
 	-- maximum_height = 125,					-- Maximum height of window. It seems not supported in new conky config.
-	minimum_width = 1,							-- Minimum width of window
+	minimum_width = 1,						-- Minimum width of window
 	maximum_width = 125,						-- Maximum width of window
 
 	-- minimum_size 0 0							-- Minimum size of window. It seems not supported in new conky config.
@@ -67,7 +67,7 @@ conky.config = {
 
 	--Graphical
 
-	-- border_margin = 0,						-- It seems not supported in new conky config.
+	-- border_margin = 0,							-- It seems not supported in new conky config.
 	border_inner_margin = 0,					-- Inner border margin in pixels (the margin between the border and text). 
 	border_outer_margin = 0,					-- Outer border margin in pixels (the margin between the border and the edge of the window). 
 	border_width = 0,							-- border width in pixels
