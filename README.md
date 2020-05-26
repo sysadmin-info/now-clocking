@@ -1,10 +1,10 @@
-# Now Clocking is a fork of Now Clocking 
-from https://github.com/gamehelp16/now-clocking made by my compatriot.
+# Now Clocking
 
 Now Clocking is a Conky widget which shows a Monstercat style Now Playing when music is played via Spotify or cmus, or a clock when no music is playing.
 
-Actually I commented out the clock, because I have a lot of clocks on my desktop thanks conky. Changed the conky code to the modern style, because the whole code was written for older version of conky. I simplified it a little bit, instead of copying everything to two different directories, I prefer to keep everything in one place.
+Modified to be able to work in Arco Linux. 
 
+<<<<<<< HEAD
 It is working in Elementary OS so it should work also in Ubuntu, or Debian. 
 
 For Arch separate branch is here: https://github.com/sysadmin-info/now-clocking/tree/now-clocking-arch
@@ -14,6 +14,9 @@ Other conkies I modified will be soon also accessible. If you are very impatient
 ![screenshot](https://i.imgur.com/3nq4U9P.png)
 
 ![screenshot 2](http://i.imgur.com/nAyLBTlm.png) ![screenshot 3](http://i.imgur.com/mshrZQUm.png) ![screenshot 4](http://i.imgur.com/Eglo1aim.png)
+=======
+![screenshot](http://i.imgur.com/nAyLBTlm.png) ![screenshot 2](http://i.imgur.com/mshrZQUm.png) ![screenshot 3](http://i.imgur.com/Eglo1aim.png)
+>>>>>>> 1fdc4628a6f98ec936988f954128a1a95523464a
 
 Imgur album containing full res images can be found [here](http://imgur.com/a/9Zcqu).
 
@@ -29,10 +32,10 @@ Please keep in mind that this widget was originally created for personal use onl
 ## Installation
 
 1. Install the fonts "Gotham Bold", "Gotham Book", and "Montserrat Light".
-2. Copy all files into `~/.conky/now-playing` directory. If it is not there just create it, please.
-3. Put the Conky widget into your desktop.
-4. You might want to adjust the positioning of the widget since as said above, this widget is originally created for personal use only so I just made it specifically for my screen size, etc.
-5. Copy conky-delay.sh to your home directory and add it to autostart. Hope you know how to do this step.
+2. Copy the files `cmusart` and `spotifyart` into `~/Documents`
+3. Copy the folder `np` into your `.conky` folder.
+4. Put the Conky widget into your desktop.
+5. You might want to adjust the positioning of the widget since as said above, this widget is originally created for personal use only so I just made it specifically for my screen size, etc.
 
 ## Some questions you might ask
 

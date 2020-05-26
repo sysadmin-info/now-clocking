@@ -39,56 +39,55 @@ conky.config = {
 	--Various settings
 
 	background = false,
-	cpu_avg_samples = 2,						-- The number of samples to average for CPU monitoring.	
-	double_buffer = true,						-- Use the Xdbe extension? (eliminates flicker)
+	cpu_avg_samples = 2,							-- The number of samples to average for CPU monitoring.	
+	double_buffer = true,							-- Use the Xdbe extension? (eliminates flicker)
 	no_buffers = true,							-- Subtract (file system) buffers from used memory?
-	net_avg_samples = 2,						-- The number of samples to average for net data
-	text_buffer_size = 8000,					-- size of buffer for display of content of large variables - default 256
-	total_run_times = 0,						-- total run times
-	update_interval = 1,						-- update interval
+	net_avg_samples = 2,							-- The number of samples to average for net data
+	text_buffer_size = 8000,						-- size of buffer for display of content of large variables - default 256
+	total_run_times = 0,							-- total run times
+	update_interval = 1,							-- update interval
 	max_user_text = 10000,
 
 	--Placement
 
-	alignment = 'bottom_left',					-- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
-                                  				-- middle_left,middle_middle,middle_right,none
-    gap_x = 50,									-- pixels between right or left border
-	gap_y = 90,									-- pixels between bottom or left border
-	minimum_height = 230,						-- minimum height of window
-	minimum_width = 230,						-- minimum width of window
-	maximum_width = 1270,						-- maximum height of window
+	alignment = 'bottom_left',						-- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
+                                  						-- middle_left,middle_middle,middle_right,none
+	gap_x = 50,								-- pixels between right or left border
+	gap_y = 90,								-- pixels between bottom or left border
+	minimum_height = 230,							-- minimum height of window
+	minimum_width = 230,							-- minimum width of window
+	maximum_width = 1270,							-- maximum height of window
 
 	--Graphical
 
 	border_width = 5, 							-- border width in pixels
-	draw_borders = false,						-- draw borders around text
-	draw_graph_borders = false,				 	-- draw borders around graphs
-	draw_shades = false,						-- draw shades
-	draw_outline = false,						-- draw outline
+	draw_borders = false,							-- draw borders around text
+	draw_graph_borders = false,					 	-- draw borders around graphs
+	draw_shades = false,							-- draw shades
+	draw_outline = false,							-- draw outline
 	stippled_borders = 3,
-
 
 	--Textual
 
 	use_xft = true,								-- xft font - anti-aliased font
 	xftalpha = 1,								-- alpha of the xft font - between 0-1
-	font = 'Freesans:size=8',      				-- font for complete conky unless in code defined	
-	override_utf8_locale = true,				-- force UTF8 requires xft
+	font = 'Freesans:size=8',      						-- font for complete conky unless in code defined	
+	override_utf8_locale = true,						-- force UTF8 requires xft
 	uppercase = true,							-- uppercase or lowercase
-	use_spacer = 'right',						-- adds spaces around certain objects to align - default none
+	use_spacer = 'right',							-- adds spaces around certain objects to align - default none
 	short_units = true,							-- shorten units from KiB to k
 	pad_percents = 2,
 
 	--Windows
 
 	own_window = true,							-- create your own window to draw.
-	own_window_argb_value = 0,					-- real transparency - composite manager required 0-255
-	own_window_argb_visual = true,				-- use ARGB - composite manager required
-	own_window_transparent = true,				-- if own_window_argb_visual is true sets background opacity 0%
-	own_window_class = 'conky-semi',			-- manually set the WM_CLASS name for use with xprop
-	own_window_type = 'override',				-- if own_window true options are: normal/override/dock/desktop/panel
-	own_window_colour = '000000',				-- set colour if own_window_transparent no	
-	own_window_hints = 'undecorated,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
+	own_window_argb_value = 0,						-- real transparency - composite manager required 0-255
+	own_window_argb_visual = true,						-- use ARGB - composite manager required
+	own_window_transparent = true,						-- if own_window_argb_visual is true sets background opacity 0%
+	own_window_class = 'conky-semi',					-- manually set the WM_CLASS name for use with xprop
+	own_window_type = 'override',						-- if own_window true options are: normal/override/dock/desktop/panel
+	own_window_colour = '000000',						-- set colour if own_window_transparent no	
+	own_window_hints = 'undecorated,above,sticky,skip_taskbar,skip_pager',	-- if own_window true - just hints - own_window_type sets it
 
 };
 
