@@ -8,7 +8,7 @@ It is working in ArcoLinux for me.
 
 Other conkies I modified will be soon also accessible. If you are very impatient, you can follow my tutorial at YouTube: https://youtu.be/1uHQ1493c04 
 
-![screenshot](https://i.imgur.com/3nq4U9P.png)
+![screenshot](https://imgur.com/kKjrMqz)
 
 ![screenshot 2](http://i.imgur.com/nAyLBTlm.png) ![screenshot 3](http://i.imgur.com/mshrZQUm.png) ![screenshot 4](http://i.imgur.com/Eglo1aim.png)
 
