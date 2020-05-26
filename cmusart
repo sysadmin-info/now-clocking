@@ -1,7 +1,10 @@
 #!/bin/bash
-url=`cmus-remote -Q 2>/dev/null | grep 'file' | cut -d " " -f 2-`
-content=$(cat ~/.conky/now-playing/npart2.txt)
+
+url=`cmus-remote -Q 2>/dev/null | egrep 'file' | cut -d " " -f 3-`
+
+content=$(cat ~/.config/conky/npart2.txt)
+
 if [ "$content" != "$url" ]; then
-echo $url > ~/.conky/now-playing/npart2.txt
-ffmpeg -y -i "$url" -an -vcodec copy ~/.conky/now-playing/npart2.jpg
+echo $url > ~/.config/conky/npart2.txt
+ffmpeg -y -i "$url" -an -vcodec copy ~/.config/conky/npart2.jpg
 fi

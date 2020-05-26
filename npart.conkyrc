@@ -34,7 +34,6 @@
 
 ]]
 
-
 conky.config = {
 
 	--Various settings
@@ -56,9 +55,9 @@ conky.config = {
                                   				-- middle_left,middle_middle,middle_right,none
     gap_x = 50,									-- Pixels between right or left border
 	gap_y = 150,								-- Pixels between bottom or left border
-	minimum_height = 1,						-- Minimum height of window
+	minimum_height = 1,							-- Minimum height of window
 	-- maximum_height = 125,					-- Maximum height of window. It seems not supported in new conky config.
-	minimum_width = 1,						-- Minimum width of window
+	minimum_width = 1,							-- Minimum width of window
 	maximum_width = 125,						-- Maximum width of window
 
 	-- minimum_size 0 0							-- Minimum size of window. It seems not supported in new conky config.
@@ -67,7 +66,7 @@ conky.config = {
 
 	--Graphical
 
-	-- border_margin = 0,							-- It seems not supported in new conky config.
+	-- border_margin = 0,						-- It seems not supported in new conky config.
 	border_inner_margin = 0,					-- Inner border margin in pixels (the margin between the border and text). 
 	border_outer_margin = 0,					-- Outer border margin in pixels (the margin between the border and the edge of the window). 
 	border_width = 0,							-- border width in pixels
@@ -94,11 +93,11 @@ conky.config = {
 	own_window_argb_visual = false,				-- use ARGB - composite manager required
 	own_window_transparent = false,				-- if own_window_argb_visual is true sets background opacity 0%
 	own_window_class = 'conky-semi',			-- manually set the WM_CLASS name for use with xprop
-	own_window_type = 'desktop',				-- if own_window true options are: normal/override/dock/desktop/panel
-	own_window_colour = '000000',				-- If own_window_transparent no, set a specified background colour (defaults to black). Takes either a hex value (e.g. ffffff, note the lack of '#') or a valid 											-- RGB name (see /usr/lib/X11/rgb.txt) 	
+	own_window_type = 'override',				-- if own_window true options are: normal/override/dock/desktop/panel
+	own_window_colour = '000000',				-- If own_window_transparent no, set a specified background colour (defaults to black). Takes either a hex value (e.g. ffffff, note the lack of '#') or a valid 										-- RGB name (see /usr/lib/X11/rgb.txt) 	
 	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
 
 };
 
 
-conky.text = [[${if_running spotify}${exec bash ~/.conky/now-playing/spotifyart}${color #fff}${image ~/.conky/now-playing/npart.jpg -p 0,0 -s 125x125 -n}${font Gotham Book:pixelsize=15}                            ${voffset 112}${endif}${if_running cmus}${exec bash ~/.conky/now-playing/cmusart}${color #fff}${image ~/.conky/now-playing/npart2.jpg -p 0,0 -s 125x125 -n}${font Gotham Book:pixelsize=15}                            ${voffset 112}${endif}]];
+conky.text = [[${if_running spotify}${exec bash ~/.config/conky/spotifyart}${color #fff}${image ~/.config/conky/npart.jpg -p 0,0 -s 125x125 -n}${font Gotham Book:pixelsize=15}                            ${voffset 112}${endif}${if_running cmus}${exec bash ~/.config/conky/cmusart}${color #fff}${image ~/.config/conky/npart2.jpg -p 0,0 -s 125x125 -n}${font Gotham Book:pixelsize=15}                            ${voffset 112}${endif}]];

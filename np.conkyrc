@@ -32,7 +32,6 @@
 # Gotham Book, Gotham Bold, Montserrat Light
 #======================================================================================
 
-
 ]]
 
 conky.config = {
@@ -54,9 +53,9 @@ conky.config = {
 	alignment = 'bottom_left',					-- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
                                   				-- middle_left,middle_middle,middle_right,none
     gap_x = 50,									-- pixels between right or left border
-	gap_y = 90,								-- pixels between bottom or left border
+	gap_y = 90,									-- pixels between bottom or left border
 	minimum_height = 230,						-- minimum height of window
-	minimum_width = 230,						-- minimum height of window
+	minimum_width = 230,						-- minimum width of window
 	maximum_width = 1270,						-- maximum height of window
 
 	--Graphical
@@ -82,13 +81,13 @@ conky.config = {
 
 	--Windows
 
-	own_window = true,							-- create your own window to draw	
+	own_window = true,							-- create your own window to draw.
 	own_window_argb_value = 0,					-- real transparency - composite manager required 0-255
 	own_window_argb_visual = true,				-- use ARGB - composite manager required
 	own_window_transparent = true,				-- if own_window_argb_visual is true sets background opacity 0%
 	own_window_class = 'conky-semi',			-- manually set the WM_CLASS name for use with xprop
-	own_window_type = 'desktop',				-- if own_window true options are: normal/override/dock/desktop/panel
-	own_window_colour = '#000000',				-- set colour if own_window_transparent no	
+	own_window_type = 'override',				-- if own_window true options are: normal/override/dock/desktop/panel
+	own_window_colour = '000000',				-- set colour if own_window_transparent no	
 	own_window_hints = 'undecorated,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
 
 };
@@ -96,13 +95,13 @@ conky.config = {
 conky.text = [[
 ${if_running spotify}
 
-#${exec bash ~/.conky/now-playing/spotifyart}
-#${image ~/.conky/now-playing/npart.jpg -p 0,70 -s 125x125 -n}
+#${exec bash ~/.config/conky/spotifyart}
+#${image ~/.config/conky/npart.jpg -p 0,70 -s 125x125 -n}
 ${color #fff}${font Gotham Book:pixelsize=16}NOW PLAYING:
 ${color #fff}${font Gotham Book:pixelsize=15}
 
-${color #fff}${font Gotham Bold:pixelsize=44}           ${font Gotham Bold:pixelsize=46}${exec dbus-send --session --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'|egrep -A 2 "artist"|egrep -v "artist"|egrep -v "array"|cut -b 27-|tr -d '"'|egrep -v ^$}${font Gotham Bold:pixelsize=10}
-${color #fff}${font Gotham Book:pixelsize=44}           ${font Gotham Book:pixelsize=23}${exec dbus-send --session --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'|egrep -A 1 "title"|egrep -v "title"|cut -b 44-|tr -d '"'|egrep -v ^$}
+${color #fff}${font Gotham Bold:pixelsize=44}           ${font Gotham Bold:pixelsize=46}${exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'|egrep -A 2 "artist"|egrep -v "artist"|egrep -v "array"|cut -b 27-|tr -d '"'|egrep -v ^$}${font Gotham Bold:pixelsize=10}
+${color #fff}${font Gotham Book:pixelsize=44}           ${font Gotham Book:pixelsize=23}${exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'|egrep -A 1 "title"|egrep -v "title"|cut -b 44-|tr -d '"'|egrep -v ^$}
 ${else}
 
 ${if_running cmus}
@@ -110,8 +109,8 @@ ${color #fff}${font Gotham Book:pixelsize=18}NOW PLAYING:
 ${color #fff}${font Gotham Book:pixelsize=15}
 
 
-${color #fff}${font Gotham Bold:pixelsize=44}           ${font Gotham Bold:pixelsize=46}${exec cmus-remote -Q 2>/dev/null | grep 'tag artist' | cut -d " " -f 3-}${font Gotham Bold:pixelsize=10}
-${color #fff}${font Gotham Bold:pixelsize=44}           ${font Gotham Book:pixelsize=23}${exec cmus-remote -Q 2>/dev/null | grep title | cut -d " " -f 3- }
+${color #fff}${font Gotham Bold:pixelsize=44}           ${font Gotham Bold:pixelsize=46}${exec cmus-remote -Q 2>/dev/null | egrep 'tag artist' | cut -d " " -f 3-}${font Gotham Bold:pixelsize=10}
+${color #fff}${font Gotham Bold:pixelsize=44}           ${font Gotham Book:pixelsize=23}${exec cmus-remote -Q 2>/dev/null | egrep 'title' | cut -d " " -f 3- }
 ${else}
 ${font Gotham Book:pixelsize=100}
 

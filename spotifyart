@@ -1,8 +1,11 @@
 #!/bin/bash
-test=`dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'|egrep -A 1 "artUrl"|egrep -v "artUrl"|cut -b 44-|cut -d '"' -f 1|egrep -v ^$`
-url=${test/https:\/\/open.spotify.com/https:\/\/i.scdn.co}
-content=$(cat ~/.conky/now-playing/npart.txt)
+
+test=`dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'|egrep -A 1 "artUrl"|egrep -v "artUrl"|cut -b 44-|tr -d '"'|egrep -v ^$`
+
+url=${test/https:\/\/open.spotify.com/http:\/\/i.scdn.co}
+content=$(cat ~/.config/conky/npart.txt)
+
 if [ "$content" != "$url" ]; then
-echo $url > ~/.conky/now-playing/npart.txt
-curl -s $url > ~/.conky/now-playing/npart.jpg
+echo $url > ~/.config/conky/npart.txt
+curl -s $url > ~/.config/conky/npart.jpg
 fi
