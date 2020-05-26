@@ -2,21 +2,15 @@
 
 Now Clocking is a Conky widget which shows a Monstercat style Now Playing when music is played via Spotify or cmus, or a clock when no music is playing.
 
-Modified to be able to work in Arco Linux. 
+I modified to be able to work in ArcoLinux and changed the configuration to adapt it to the modern conky config requirements.
 
-<<<<<<< HEAD
-It is working in Elementary OS so it should work also in Ubuntu, or Debian. 
-
-For Arch separate branch is here: https://github.com/sysadmin-info/now-clocking/tree/now-clocking-arch
+It is working in ArcoLinux for me.
 
 Other conkies I modified will be soon also accessible. If you are very impatient, you can follow my tutorial at YouTube: https://youtu.be/1uHQ1493c04 
 
 ![screenshot](https://i.imgur.com/3nq4U9P.png)
 
 ![screenshot 2](http://i.imgur.com/nAyLBTlm.png) ![screenshot 3](http://i.imgur.com/mshrZQUm.png) ![screenshot 4](http://i.imgur.com/Eglo1aim.png)
-=======
-![screenshot](http://i.imgur.com/nAyLBTlm.png) ![screenshot 2](http://i.imgur.com/mshrZQUm.png) ![screenshot 3](http://i.imgur.com/Eglo1aim.png)
->>>>>>> 1fdc4628a6f98ec936988f954128a1a95523464a
 
 Imgur album containing full res images can be found [here](http://imgur.com/a/9Zcqu).
 
@@ -32,10 +26,9 @@ Please keep in mind that this widget was originally created for personal use onl
 ## Installation
 
 1. Install the fonts "Gotham Bold", "Gotham Book", and "Montserrat Light".
-2. Copy the files `cmusart` and `spotifyart` into `~/Documents`
-3. Copy the folder `np` into your `.conky` folder.
-4. Put the Conky widget into your desktop.
-5. You might want to adjust the positioning of the widget since as said above, this widget is originally created for personal use only so I just made it specifically for my screen size, etc.
+2. Copy all files into `~/.config/conky`
+3. Put the Conky widget into your desktop.
+4. You might want to adjust the positioning of the widget since as said above, this widget is originally created for personal use only so I just made it specifically for my screen size, etc.
 
 ## Some questions you might ask
 
